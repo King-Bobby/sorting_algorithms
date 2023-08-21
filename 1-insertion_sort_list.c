@@ -3,13 +3,13 @@
 
 /**
  * insertion_sort_list - Sorts doubly linked list of integer in ascending order
- * * @list: Pointer to the pointer to the head of the list
+ * @list: Pointer to the pointer to the head of the list
  */
 void insertion_sort_list(listint_t **list)
 {
 	listint_t *current = (*list)->next;
 
-	if (list == NULL || *list == NULL || (*list)->next == NULL)
+	if (list == NULL || *list == NULL || **list == NULL || (*list)->next == NULL)
 		return;
 	while (current != NULL)
 	{
